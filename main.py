@@ -8,13 +8,6 @@ from selenium.webdriver.remote.webelement import WebElement
 from typing import List
 
 
-def download_pdfs(pdfs: List[WebElement]) -> None:
-    for pdf in pdfs:
-        pdf.click()
-        sleep(1)
-
-
-
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": str(Path(__file__).parent / "pdfs")}
@@ -26,15 +19,15 @@ driver.get("https://xakep.ru/issues")
 elem = driver.find_element(by=By.CLASS_NAME, value="login-link")
 elem.click()
 login = driver.find_element(by=By.CLASS_NAME, value="input")
-login.send_keys(os.environ['login'])
+login.send_keys(os.environ["login"])
 sleep(random.randint(1, 3))
 password = driver.find_element(by=By.ID, value="user_pass")
-password.send_keys(os.environ['password'])
+password.send_keys(os.environ["password"])
 sleep(random.randint(1, 3))
 login_button = driver.find_element(by=By.ID, value="wp-submit")
 login_button.click()
 all_pages = driver.find_element(by=By.CLASS_NAME, value="pages")
 all_pages = int(all_pages.text[-2::])
 for i in range(1, all_pages):
-    driver.get(f'https://xakep.ru/pdf/xa/{i:03}')
+    driver.get(f"https://xakep.ru/pdf/xa/{i:03}")
     sleep(1)
