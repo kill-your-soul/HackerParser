@@ -14,7 +14,6 @@ def download_pdfs(pdfs: List[WebElement]) -> None:
         sleep(1)
 
 
-
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": str(Path(__file__).parent / "pdfs")}
@@ -26,10 +25,10 @@ driver.get("https://xakep.ru/issues")
 elem = driver.find_element(by=By.CLASS_NAME, value="login-link")
 elem.click()
 login = driver.find_element(by=By.CLASS_NAME, value="input")
-login.send_keys(os.environ['login'])
+login.send_keys(os.environ["login"])
 sleep(random.randint(1, 3))
 password = driver.find_element(by=By.ID, value="user_pass")
-password.send_keys(os.environ['password'])
+password.send_keys(os.environ["password"])
 sleep(random.randint(1, 3))
 login_button = driver.find_element(by=By.ID, value="wp-submit")
 login_button.click()
