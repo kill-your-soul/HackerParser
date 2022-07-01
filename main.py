@@ -11,6 +11,7 @@ chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_experimental_option(
     "prefs", {"download.default_directory": str(Path(__file__).parent / "pdfs")}
 )
+chromeOptions.add_argument("--headless")
 driver = webdriver.Chrome(chrome_options=chromeOptions)
 
 
