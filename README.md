@@ -1,5 +1,6 @@
 # Xakep parser
 HackerParser is a tool which allows you to download all magazines from [xakep.ru](https://xakep.ru/issues)
+It's the experimental branch. All commits added to this branch aren't safe. 
 
 # Prerequisites
 
