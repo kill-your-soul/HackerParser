@@ -6,12 +6,22 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from typing import List
-
+from colorama import Fore
 
 def download_pdfs(pdfs: List[WebElement]) -> None:
     for pdf in pdfs:
         pdf.click()
         sleep(1)
+
+
+try:
+    login = os.environ['login']
+    password = os.environ['password']
+except KeyError:
+    print(Fore.RED + 'password or login not found in environment variables' + Fore.RESET)
+    login = str(input('Input login for xakep.ru: '))
+    password = str(input('Input password for xakep.ru: '))
+
 
 
 chromeOptions = webdriver.ChromeOptions()
@@ -26,10 +36,10 @@ driver.get("https://xakep.ru/issues")
 elem = driver.find_element(by=By.CLASS_NAME, value="login-link")
 elem.click()
 login = driver.find_element(by=By.CLASS_NAME, value="input")
-login.send_keys(os.environ["login"])
+login.send_keys(login)
 sleep(random.randint(1, 3))
 password = driver.find_element(by=By.ID, value="user_pass")
-password.send_keys(os.environ["password"])
+password.send_keys(password)
 sleep(random.randint(1, 3))
 login_button = driver.find_element(by=By.ID, value="wp-submit")
 login_button.click()
