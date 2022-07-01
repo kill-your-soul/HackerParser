@@ -1,60 +1,103 @@
 # Hacker parser
-
-HackerParser is a tool which allows you to download all magazines from [xakep.ru/issues](https://xakep.ru/issues)
+HackerParser is a tool which allows you to download all magazines from [xakep.ru](https://xakep.ru/issues)
 
 # Prerequisites
 
 1. [Python](https://python.org/) version 3.8 or later
 2. pip or pip3
+3. Subscription for [xaker.ru](https://xakep.ru)
 
 # Instructions
 
 ## Installing requirements
 
 1. Clone this repo
-
-        git clone https://github.com/kill-your-soul/HackerParser
-
+        
+    ```shell
+    git clone https://github.com/kill-your-soul/HackerParser
+    ```
 2. Create virtual environment 
     
     - For Windows:
 
-            python -m venv .venv
-    
-    - For Linux, MacOS:
-        
-            python3 -m venv .venv
+        ```shell
+        python -m venv .venv
+        ```
 
-3. Activate your virtual environment
+    - For Linux, MacOS:
+    
+        ```shell
+        python3 -m venv .venv
+        ```
+
+3. Activate virtual environment
 
     - For Windows:
-
-            .\.venv\Scripts\activate
+    
+        ```shell
+        .\.venv\Scripts\activate
+        ```
 
     - For Linux, MacOS:
 
-            source ./.venv/bin/activate
-
+        ```shell
+        source ./.venv/bin/activate
+        ```
 
 4. Install requirements
 
     - For Windows:
 
-            pip install -r requirements.txt
+        ```shell
+        pip install -r requirements.txt
+        ```
 
     - For Linux, MacOS:
-
-            pip3 install -r requirements.txt
-
+    
+        ```shell
+        pip3 install -r requirements.txt
+        ```
 
 ## Running the script
 
-1. Run script by command
+1. Setting environment variables
 
     - For Windows:
 
-            python main.py
+        + Powershell:
+
+            ```shell
+            $env:login = "YOUR_LOGIN_TO_XAKEP";
+            $env:password = "YOUR_PASSWORD_TO_XAKEP";
+            ```
+        
+        + cmd:
+
+            ```shell
+            set login=YOUR_LOGIN_TO_XAKEP
+            set password=YOUR_PASSWORD_TO_XAKEP
+            ```
+
+    - For Linux, MacOS:
+
+        + Bash:
+
+            ```shell
+            export login="YOUR_LOGIN_TO_XAKEP"
+            export password="YOUR_PASSWORD_TO_XAKEP"
+            ```
+
+
+2. Run script
+
+    - For Windows:
+
+        ```shell
+        python main.py
+        ```
 
     - For Linux, MacOS
-
-            python3 main.py
+        
+        ```shell
+        python3 main.py
+        ```
