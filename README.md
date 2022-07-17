@@ -1,5 +1,5 @@
 # Xakep parser
-HackerParser is a tool which allows you to download all magazines from [xakep.ru](https://xakep.ru/issues)
+XakerParser is a tool which allows you to download all magazines from [xakep.ru](https://xakep.ru/issues)
 
 # Prerequisites
 
