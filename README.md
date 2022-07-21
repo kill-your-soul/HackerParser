@@ -20,7 +20,7 @@ XakerParser is a tool which allows you to download all magazines from [xakep.ru]
     
     - For Windows:
 
-        ```shell
+        ```Powershell
         python -m venv .venv
         ```
 
@@ -34,7 +34,7 @@ XakerParser is a tool which allows you to download all magazines from [xakep.ru]
 
     - For Windows:
     
-        ```shell
+        ```Powershell
         .\.venv\Scripts\activate
         ```
 
@@ -66,14 +66,14 @@ XakerParser is a tool which allows you to download all magazines from [xakep.ru]
 
         + Powershell:
 
-            ```shell
+            ```Powershell
             $env:login = "YOUR_LOGIN_TO_XAKEP";
             $env:password = "YOUR_PASSWORD_TO_XAKEP";
             ```
         
         + cmd:
 
-            ```shell
+            ```cmd
             set login=YOUR_LOGIN_TO_XAKEP
             set password=YOUR_PASSWORD_TO_XAKEP
             ```
@@ -92,7 +92,7 @@ XakerParser is a tool which allows you to download all magazines from [xakep.ru]
 
     - For Windows:
 
-        ```shell
+        ```Powershell
         python main.py
         ```
 
