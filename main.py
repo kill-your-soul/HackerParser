@@ -56,3 +56,4 @@ if __name__ == "__main__":
     chromeOptions.add_argument("--headless") # set preferences to hide browser
     driver = webdriver.Chrome(chrome_options=chromeOptions) # create webdriver
     parse(driver=driver, _login=login, _password=password) # parse site
+
