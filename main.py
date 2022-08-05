@@ -15,15 +15,15 @@ def download_pdfs(pdfs: List[WebElement]) -> None:
         sleep(1)
 
 
-def parse(driver: webdriver.Chrome, _login: str, _password: str) -> None:
+def parse(driver: webdriver.Chrome, login_: str, password_: str) -> None:
     driver.get("https://xakep.ru/issues") # get page
     elem = driver.find_element(by=By.CLASS_NAME, value="login-link") # find login button
     elem.click() # go to login page
     login = driver.find_element(by=By.CLASS_NAME, value="input") # find login input
-    login.send_keys(_login) # input login 
+    login.send_keys(login_) # input login 
     sleep(random.randint(1, 3))
     password = driver.find_element(by=By.ID, value="user_pass") # find password input
-    password.send_keys(_password) # input password
+    password.send_keys(password_) # input password
     sleep(random.randint(1, 3))
     login_button = driver.find_element(by=By.ID, value="wp-submit") #find login button
     login_button.click() # login to  site
@@ -55,5 +55,5 @@ if __name__ == "__main__":
     )
     chromeOptions.add_argument("--headless") # set preferences to hide browser
     driver = webdriver.Chrome(chrome_options=chromeOptions) # create webdriver
-    parse(driver=driver, _login=login, _password=password) # parse site
+    parse(driver=driver, login_=login, password_=password) # parse site
 
