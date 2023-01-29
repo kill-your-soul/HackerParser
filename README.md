@@ -67,15 +67,15 @@ HackerParser is a tool which allows you to download all magazines from [xakep.ru
         + Powershell:
 
             ```shell
-            $env:login = "YOUR_LOGIN_TO_XAKEP";
-            $env:password = "YOUR_PASSWORD_TO_XAKEP";
+            $env:LOGIN = "YOUR_LOGIN_TO_XAKEP";
+            $env:PASSWORD = "YOUR_PASSWORD_TO_XAKEP";
             ```
         
         + cmd:
 
             ```shell
-            set login=YOUR_LOGIN_TO_XAKEP
-            set password=YOUR_PASSWORD_TO_XAKEP
+            set LOGIN=YOUR_LOGIN_TO_XAKEP
+            set PASSWORD=YOUR_PASSWORD_TO_XAKEP
             ```
 
     - For Linux, MacOS:
@@ -83,8 +83,8 @@ HackerParser is a tool which allows you to download all magazines from [xakep.ru
         + Bash:
 
             ```shell
-            export login="YOUR_LOGIN_TO_XAKEP"
-            export password="YOUR_PASSWORD_TO_XAKEP"
+            export LOGIN="YOUR_LOGIN_TO_XAKEP"
+            export PASSWORD="YOUR_PASSWORD_TO_XAKEP"
             ```
 
 
@@ -93,11 +93,11 @@ HackerParser is a tool which allows you to download all magazines from [xakep.ru
     - For Windows:
 
         ```shell
-        python main.py
+        python .\src\main.py
         ```
 
     - For Linux, MacOS
         
         ```shell
-        python3 main.py
+        python3 ./src/main.py
         ```
